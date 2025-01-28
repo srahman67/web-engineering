@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    
+<body>
+
+<h2 style="background-color:rgba(172, 192, 229, 0.5);">Javascript</h2>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+<p id="demo"></p>
+
+<h2 style="background-color:rgba(172, 192, 229, 0.5);">What Can JavaScript Do?</h2>
+<p id="demo">JavaScript can change HTML content.</p>
+<button type="button" onclick='document.getElementById("demo2").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+<p id="demo2"></p>
+
+<h2 style="background-color:rgba(172, 192, 229, 0.5);"> First Web Page</h2>
+<p>My Name</p>
+
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<script>
+document.getElementById("demo3").innerHTML ='Sharmin Rahman';
+x = 5;
+y = 6;
+z = x + y;
+
+document.getElementById("demo4").innerHTML ="The value of z is: " + z;
+
+const coffee = ["Capaccino", "Buttercoach", "Latte"];
+
+// Change an element:
+coffee[0] = "Mocha";
+
+// Add an element:
+coffee.push("Hot chocolate");
+
+// Display the Array:
+document.getElementById("demo6").innerHTML = coffee; 
+
+</script>
+<script> 
+let x = 5;
+let y = 2;
+let z = x * y;
+document.getElementById("demo5").innerHTML = z;
+</script>
+<h2 style="background-color:rgba(172, 192, 229, 0.5);"> Constructors</h2>
+
+<p id="demo1"></p>
+
+
+<script>
+// Constructor Function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+// Create a Person object
+const myFather = new Person("John", "Doe", 50, "blue");
+
+// Display color
+document.getElementById("demo1").innerHTML =
+"My father eye color is " + myFather.eyeColor + ".";
+
+</script>
+<h1 id="myH"></h1>
+<p id="myP"></p>
+
+<script>
+// Change heading:
+document.getElementById("myH").innerHTML = "JavaScript Comments";
+// Change paragraph:
+document.getElementById("myP").innerHTML = "first paragraph.";
+</script>
+<h2 style="background-color:rgba(172, 192, 229, 0.5);"> Numbers</h2>
+<h4>The EPSILON</h4>
+
+<p>The difference between 1 and the smallest floating point number greater than 1, in JavaScript is:</p>
+<p id="demo7"></p>
+
+<script>
+let p = Number.EPSILON;
+document.getElementById("demo7").innerHTML = p;
+
+</script>
+<h2 style="background-color:rgba(172, 192, 229, 0.5);">The sort() Method</h2>
+
+<p>The sort() method sorts an array alphabetically:</p>
+
+<p id="demo8"></p>
+<p id="demo9"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo8").innerHTML = fruits;
+
+fruits.sort();
+document.getElementById("demo9").innerHTML = fruits;
+</script>
+<h2 style="background-color:rgba(172, 192, 229, 0.5);">Math Constants</h2>
+
+<p id="demo10"></p>
+
+<script>
+document.getElementById("demo10").innerHTML = 
+"<p><b>Math.E:</b> " + Math.E + "</p>" +
+"<p><b>Math.PI:</b> " + Math.PI + "</p>" +
+"<p><b>Math.SQRT2:</b> " + Math.SQRT2 + "</p>" +
+"<p><b>Math.SQRT1_2:</b> " + Math.SQRT1_2 + "</p>" +
+"<p><b>Math.LN2:</b> " + Math.LN2 + "</p>" +
+"<p><b>Math.LN10:</b> " + Math.LN10 + "</p>" +
+"<p><b>Math.LOG2E:</b> " + Math.LOG2E + "</p>" +
+"<p><b>Math.Log10E:</b> " + Math.LOG10E + "</p>";
+
+</script>
+<h2 style="background-color:rgba(172, 192, 229, 0.5);">if else</h2>
+
+<p>Display "Good day!" if the hour is less than 18:00:</p>
+
+<p id="demo11">Good Evening!</p>
+
+<script>
+if (new Date().getHours() < 18) {
+  document.getElementById("demo11").innerHTML = "Good day!";
+}
+
+</script>
+<h2 style="background-color:rgba(172, 192, 229, 0.5);">switch case</h2>
+
+<p id="demo12"></p>
+
+<script>
+let text;
+switch (new Date().getDay()) {
+  case 6:
+    text = "Today is Saturday";
+    break;
+  case 0:
+    text = "Today is Sunday";
+    break;
+  default:
+    text = "Looking forward to the Weekend";
+}
+document.getElementById("demo12").innerHTML = text;
+</script>
+<h2 style="background-color:rgba(172, 192, 229, 0.5);">Operators</h2>
+
+<p>The typeof operator returns the type of a variable or an expression:</p>
+
+<p id="demo13"></p>
+
+<script>
+document.getElementById("demo13").innerHTML = 
+"('sharmin'  'Rahman') is " + typeof ("Sharmin" + "Rahman") + "<br><br>" +
+"3.14 is " + typeof 3.14 + "<br><br>" +
+
+"true is " + typeof true + "<br><br>" +
+
+"Symbol() is " + typeof Symbol() + "<br><br>" +
+"x is " + typeof x;
+</script>
+
+<h2 style="background-color:rgba(172, 192, 229, 0.5);">Functions</h2>
+
+<p>This example shows the syntax of a function, without the use of arrow function syntax.</p>
+
+<p id="demo14"></p>
+
+<script>
+let hello = "";
+
+hello = function() {
+  return "Hello World!";
+}
+
+document.getElementById("demo14").innerHTML = hello();
+</script>
+<h2 style="background-color:rgba(172, 192, 229, 0.5);"> JavaScript Mistakes</h2>
+
+<p>This if statement returns false (maybe not as expected), because 0 is false:</p>
+
+<p id="demo14"></p>
+
+<script>
+let w = 0;
+document.getElementById("demo14").innerHTML = Boolean(x = 10);
+</script>
+<h2 style="background-color:rgba(172, 192, 229, 0.5);">Light Bulb</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+</body>
+</html> 
