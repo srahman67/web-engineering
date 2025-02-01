@@ -70,7 +70,7 @@ document.getElementById("demo1").innerHTML =
 "My father eye color is " + myFather.eyeColor + ".";
 
 </script>
-<h1 id="myH"></h1>
+<h2 style="background-color:rgba(172, 192, 229, 0.5);"id="myH"></h2>
 <p id="myP"></p>
 
 <script>
@@ -192,6 +192,103 @@ document.getElementById("demo14").innerHTML = hello();
 let w = 0;
 document.getElementById("demo14").innerHTML = Boolean(x = 10);
 </script>
+<!DOCTYPE html>
+<html>
+<body>
+<h2 style="background-color:rgba(172, 192, 229, 0.5);"> JavaScript Objects</h2>
+
+
+<p id="demo15"></p>
+
+<script>
+// Create an empty Object
+const person = {};
+
+// Add Properties
+person.firstName = "Mimoh";
+person.age = 21;
+
+document.getElementById("demo15").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+
+</script>
+
+</script>
+</head>
+<body>
+
+<h2 style="background-color:rgba(172, 192, 229, 0.5);">Forms</h2>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
+<h2  style="background-color:rgba(172, 192, 229, 0.5);"> Web Workers API</h2>
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button> 
+<button onclick="stopWorker()">Stop Worker</button>
+
+<script>
+let h;
+
+function startWorker() {
+  if(typeof(w) == "undefined") {
+    w = new Worker("demo_workers.js");
+  }
+  w.onmessage = function(event) {
+    document.getElementById("result").innerHTML = event.data;
+  };
+}
+
+function stopWorker() { 
+  w.terminate();
+  w = undefined;
+}
+</script>
+<style>
+  #container {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background: yellow;
+  }
+  #animate {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+  }
+  </style>
+
+  <h2 style="background-color:rgba(172, 192, 229, 0.5);">Animation</h2>
+  <p><button onclick="myMove()">Click Me</button></p> 
+  
+  <div id ="container">
+    <div id ="animate"></div>
+  </div>
+  
+  <script>
+  function myMove() {
+    let id = null;
+    const elem = document.getElementById("animate");   
+    let pos = 0;
+    clearInterval(id);
+    id = setInterval(frame, 5);
+    function frame() {
+      if (pos == 50) {
+        clearInterval(id);
+      } else {
+        pos++; 
+        elem.style.top = pos + "px"; 
+        elem.style.left = pos + "px"; 
+      }
+    }
+  }
+  </script>
+
+ 
 <h2 style="background-color:rgba(172, 192, 229, 0.5);">Light Bulb</h2>
 
 <p>JavaScript can change HTML attribute values.</p>
@@ -203,5 +300,6 @@ document.getElementById("demo14").innerHTML = Boolean(x = 10);
 <img id="myImage" src="pic_bulboff.gif" style="width:100px">
 
 <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
 </body>
 </html> 
