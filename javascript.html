@@ -247,6 +247,24 @@ function stopWorker() {
   w = undefined;
 }
 </script>
+
+  <div id="demo16">
+    <h2 style="background-color:rgba(172, 192, 229, 0.5);">AJAX</h2>
+    <button type="button" onclick="loadDoc()"> Content</button>
+    </div>
+    
+    <script>
+    function loadDoc() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {
+        document.getElementById("demo16").innerHTML =
+        this.responseText;
+      }
+      xhttp.open("GET", "C:\Users\User\Downloads\ajax_info.txt");
+      xhttp.send();
+    }
+    </script>
+
 <style>
   #container {
     width: 100px;
@@ -287,8 +305,53 @@ function stopWorker() {
     }
   }
   </script>
+<h2 style="background-color:rgba(172, 192, 229, 0.5);">Canvas</h2>
+<canvas id="myCanvas" width="400" height="400" style="border:1px solid grey"></canvas>
 
- 
+<script>
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+canvas.height = canvas.width;
+ctx.transform(1, 0, 0, -1, 0, canvas.height)
+
+const xArray = [50,60,70,80,90,100,110,120,130,140,150];
+const yArray = [7,8,8,9,9,9,10,11,14,14,15];
+
+ctx.fillStyle = "red";
+for (let i = 0; i < xArray.length-1; i++) {
+  let x = xArray[i]*400/150;
+  let y = yArray[i]*400/15;
+  ctx.beginPath();
+  ctx.ellipse(x, y, 3, 3, 0, 0, Math.PI * 2);
+  ctx.fill();
+}
+</script>
+<h2 style="background-color:rgba(172, 192, 229, 0.5);">Chart</h2>
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script>
+const xValues = ["Italy", "France", "Spain", "USA"];
+const yValues = [55, 49, 44, 24, 15];
+const barColors = ["red", "green","blue","orange"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "World Wine Production 2018"
+    }
+  }
+});
+</script>
 <h2 style="background-color:rgba(172, 192, 229, 0.5);">Light Bulb</h2>
 
 <p>JavaScript can change HTML attribute values.</p>
