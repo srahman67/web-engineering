@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .profile {
+            text-align: center;
+        }
+        .profile img {
+            border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+        }
+        .profile h1 {
+            margin: 10px 0;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        .content h2 {
+            color: #333;
+        }
+        .content p {
+            line-height: 1.6;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: left;
+        }
+        table {
+            width: 50%;
+            margin: auto;
+        }
+        .skills, .experience, .projects, .Academic Qualification, .contact {
+            background: #fff;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#career-objectives">Career Objectives</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#academic-qualification">Academic Qualification</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="about" class="profile">
+            <img src="https://images.pexels.com/photos/3289845/pexels-photo-3289845.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Profile Picture">
+            <h1>Sharmin Rahman</h1>
+            <p>Welcome to my portfolio! I'm a web developer passionate about creating beautiful and functional websites.</p>
+        </section>
+
+        <section id="career-objectives" class="content">
+            <h2>Career Objectives</h2>
+            <p>To pursue a highly rewarding career, seeking for a job in challenging and healthy work environments where I can utilize my skills and knowledge efficiently for organizational growth. I am willing to work hard with full determination and dedication to achieve organizational as well as personal goals.</p>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>UI UX Designer</li>
+                <li>Web Development</li>
+            </ul>
+        </section>
+
+        <section id="about-me" class="content">
+            <h2>About Me</h2>
+            <p>I am Sharmin Rahman.</p>
+            <p>I work on UI UX Design.</p>
+            <p>I like to travel.</p>
+            <p>I like to spend time with friends.</p>
+        </section>
+
+        <section id="academic-qualification" class="content">
+            <h2>Academic Qualification</h2>
+            <table>
+                <tr>
+                    <th>Degree</th>
+                    <th>Result</th>
+                    <th>Year</th>
+                </tr>
+                <tr>
+                    <td>SSC</td>
+                    <td>GPA-5.00</td>
+                    <td>2018</td>
+                </tr>
+                <tr>
+                    <td>HSC</td>
+                    <td>GPA-5.00</td>
+                    <td>2020</td>
+                </tr>
+                <tr>
+                    <td>BSC</td>
+                    <td>CGPA-3.30</td>
+                    <td>2025</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contact" class="content">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Sharmin Rahman. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                alert('Thank you, ' + name + '! Your message has been sent.');
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    </script>
+</body>
+</html>
