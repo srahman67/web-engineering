@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>Nested Tables</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 50px;
+        }
+
+        h2 {
+            color: rgb(221, 17, 218);
+        }
+
+        table {
+            border: 2px solid rgb(224, 35, 183);
+            margin: 20px auto;
+        }
+
+        table table {
+            border: 2px solid rgb(115, 115, 217);
+            margin: 10px auto;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>My Table</h2>
+    <p><b>Nested tables</b></p>
+
+    <table border="2">
+        <tr>
+            <td>Coffee Name</td>
+            <td>Various coffee
+                <table border="2">
+                    <tr>
+                        <td>Latte</td>
+                        <td>Capaccino</td>
+                    </tr>
+                    <tr>
+                        <td>Mocha</td>
+                        <td>Buttercoach</td>
+                    </tr>
+                    <tr>
+                        <td>Frappe</td>
+                        <td>Cold coffee</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>My favourite</td>
+            <td>Buttercoach</td>
+        </tr>
+    </table>
+</body>
+
+</html>
