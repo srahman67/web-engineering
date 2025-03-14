@@ -1,0 +1,106 @@
+/* Slightly deeper gradient background for the page */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f0c6d0, #c2d9ff); /* Soft pink to soft blue gradient */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Rest of the CSS remains the same */
+  .container {
+    max-width: 800px;
+    width: 90%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .form-box, .list-box {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-btn, .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background-color: #ffc107;
+    color: #000;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+  }
